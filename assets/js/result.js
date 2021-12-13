@@ -24,7 +24,7 @@ const settings = {
   method: "GET",
   headers: {
     "x-rapidapi-host": "zoopla.p.rapidapi.com",
-    "x-rapidapi-key": "29a6d39627mshe225ebfa3444c45p12807djsn0046fe5cd7a7",
+    "x-rapidapi-key": "995d8c468dmshc7a85afd93d9649p1d0219jsn565fcb3d64a9",
   },
 };
 
@@ -51,7 +51,6 @@ function renderarea(item) {
 }
 
 function handlechange(e) {
-
   if (e.target && e.target.matches("li.subarea")) {
     console.log(e.target.innerHTML);
 
@@ -71,7 +70,7 @@ function handlechange(e) {
       method: "GET",
       headers: {
         "x-rapidapi-host": "zoopla.p.rapidapi.com",
-        "x-rapidapi-key": "29a6d39627mshe225ebfa3444c45p12807djsn0046fe5cd7a7",
+        "x-rapidapi-key": "995d8c468dmshc7a85afd93d9649p1d0219jsn565fcb3d64a9",
       },
     };
 
@@ -93,10 +92,9 @@ function handlechange(e) {
       var detailurl = item.details_url;
 
       var divEl = document.createElement("div");
-      divEl.setAttribute("class", "image");
       divEl.setAttribute(
         "class",
-        "display h-72 w-72 bg-white my-2 ml-2 justify-center shadow-md p-2 rounded-lg border border-yellow-400 overflow-hidden "
+        "image display h-72 w-72 bg-white my-2 ml-2 justify-center shadow-md p-2 rounded-lg border border-yellow-400 overflow-hidden "
       );
       divEl.setAttribute("data-item", JSON.stringify(item));
 
@@ -114,13 +112,11 @@ function handlechange(e) {
 
       divEl.appendChild(imageEl);
 
-
       divEl.appendChild(addressEl);
 
       divEl.appendChild(seeMoreEl);
 
       displayEl.appendChild(divEl);
-
     }
   }
 }
@@ -135,6 +131,5 @@ function imageclick(e) {
 
   var localStorageKey = "details";
   localStorage.setItem(localStorageKey, listingDetail);
-  window.location.href = "../house_info/crime.html";
+  window.location.href = "../html/crime.html";
 }
-
